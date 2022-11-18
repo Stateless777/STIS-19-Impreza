@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Service Manual</title>
+  <meta charset="utf-8" />
+  <script type="text/javascript" src="js/jquery-latest.js"></script>
+  <script type="text/javascript" src="js/jquery-ui-latest.js"></script>
+  <script type="text/javascript" src="js/jquery.layout-latest.js"></script>
+  <script type="text/javascript" src="resources/lang.js"></script>
+  <script type="text/javascript" src="resources/shimuke.js"></script>
+  <script type="text/javascript" src="resources/messages.js"></script>
+  <script type="text/javascript" src="resources/sisectitles.js"></script>
+  <script type="text/javascript" src="js/main.js"></script>
+  <script type="text/javascript" src="resources/manual.js"></script>
+  <script type="text/javascript" src="resources/menus.js"></script>
+  <script type="text/javascript" src="resources/index.js"></script>
+  <link rel="stylesheet" href="css/basic.css" type="text/css">
+</head>
+<body>
+<!--header-->
+<header class="ui-layout-north">
+  <div class="top-head">
+    <span style="position:absolute;top:10px;left:10px;font-size:16px;"><span id="carcategory"></span> &nbsp;&nbsp; <span id="kubunlabel"></span><span id="kubun"></span> &nbsp;&nbsp; PubNo.<span id="pubno"></span></span>
+    <span style="position:absolute;top:10px;right:10px;font-size:16px;font-weight:bold;"><span id="service_manual" style="vertical-align:top;"></span></span>
+  </div>
+  <div class="main-head">
+    <div>
+      <button id="modelmenu" onclick="location.href='../../index.html'"></button>
+      <button id="topmenu" onclick="location.href='index.html'"></button>
+      <button onclick="showLookup()" id="searchmenu"></button>
+      <button onclick="showDtc()" id="dtcsearchmenu"></button>
+      <button onclick="showWiring()" id="wiringmenu"></button>
+      <button onclick="togglePrintSubmenu()" id="printmenu"></button>
+      <div id="printsubmenu" style="display:none;">
+        <button id="printssimenu" onclick="printSSI()" style="display:none;"></button>
+        <button id="printsectionmenu" onclick="printSection()"></button>
+      </div>
+      <button onclick="showSearch()" id="wordsearchmenu"></button>
+      <button id="sstmenu" onclick="showSst()"></button>
+      <button id="repairharnessmenu" onclick="showRepairHarness()"></button>
+	<button id="newcarinfomenu" onclick="toggleShinkaisubmenu()"></button>
+	<div id="newcarinfosubmenu" style="display:none;">
+	<button id="newcarinfo2017" onclick="newcarinfo(id)"></button>
+	<button id="newcarinfoImpreza_2018" onclick="newcarinfo(id)"></button>
+	<button id="newcarinfoCrosstrek_2018" onclick="newcarinfo(id)"></button>
+	<button id="newcarinfoImpreza_2019" onclick="newcarinfo(id)"></button>
+	<button id="newcarinfoCrosstrek_2019" onclick="newcarinfo(id)"></button>
+	</div>
+
+      <button id="helpmenu" onclick="showHelp()"></button>
+    </div>
+    <div id="sisecmenu" style="margin-top:1px;"></div>
+  </div>
+</header>
+<!--tree-->
+<nav class="ui-layout-west tree">
+  <div id="treetop">
+    <div id="titlesisec"></div>
+    <div style="text-align:right;padding-right:2px;"><!--<button onclick="myLayout.close('west')" style="cursor:pointer;">&lt;</button>--></div>
+  </div>
+  <div id="treemenu">
+  </div>
+</nav>
+<!--content-->
+<div class="ui-layout-center">
+<iframe id="content" src="top.html" style="width:100%;height:99%;" scrolling="yes" frameborder="0"></iframe>
+</div>
+</body>
+</html>
+<!--
+Server:HTSISSV09
+Date:20210527125540
+SUC_Version:V030602
+SUC_JobID:558523
+SUC_Modelyear:2019
+SUC_Carcategry:インプレッサ/CROSSTREK/XV
+SUC_Shimuke:北米向け
+-->
